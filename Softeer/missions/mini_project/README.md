@@ -1,4 +1,4 @@
-# Mini project
+<img width="882" height="876" alt="스크린샷_2025-07-31_오후_5 12 16" src="https://github.com/user-attachments/assets/403f2a4b-9ed1-41e8-a14b-839e434b69e8" /><img width="1285" height="811" alt="스크린샷_2025-07-31_오후_5 30 13" src="https://github.com/user-attachments/assets/559c4e2b-d862-4510-a6c6-79c021448d30" /># Mini project
 
 ---
 
@@ -10,17 +10,17 @@ Team #2 : DE박건희, DE임채현, DE오민우
 
 # 목차
 
-[I. 개요](https://www.notion.so/Mini-project-README-24172994258d80e2a9bef3dade303240?pvs=21)
+[I. 개요]
 
-[II. 해결 방안](https://www.notion.so/Mini-project-README-24172994258d80e2a9bef3dade303240?pvs=21)
+[II. 해결 방안]
 
-[III. 방법론](https://www.notion.so/Mini-project-README-24172994258d80e2a9bef3dade303240?pvs=21)
+[III. 방법론]
 
-[IV. 프로토타입](https://www.notion.so/Mini-project-README-24172994258d80e2a9bef3dade303240?pvs=21)
+[IV. 프로토타입]
 
-[V. 결과 분석](https://www.notion.so/Mini-project-README-24172994258d80e2a9bef3dade303240?pvs=21)
+[V. 결과 분석]
 
-[VI. 한계점](https://www.notion.so/Mini-project-README-24172994258d80e2a9bef3dade303240?pvs=21)
+[VI. 한계점]
 
 ---
 
@@ -351,7 +351,7 @@ Team #2 : DE박건희, DE임채현, DE오민우
             front_cols = ['이름', '팀', '나이', '국가', '키', '셔츠', '주로 사용하는 발', '포지션', '선발', '경기', '출전 시간', '시장 가치', '경고', '퇴장', '평점', '득점']
             df = df[[col for col in front_cols if col in df.columns] + [col for col in df.columns if col not in front_cols]]
             df.to_csv(csv_path, index=False, encoding='utf-8-sig')
-            print(f"✅ HTML → CSV 저장 완료: {csv_path}")
+            print(f"HTML → CSV 저장 완료: {csv_path}")
         
         def normalize_percentage_column(series):
             def convert(val):
@@ -432,7 +432,7 @@ Team #2 : DE박건희, DE임채현, DE오민우
             normalized_df = normalized_df.applymap(lambda x: int(round(x * 100)))
             final_output_df = pd.concat([final_df[info_cols].reset_index(drop=True), normalized_df.reset_index(drop=True)], axis=1)
             final_output_df.to_csv(output_csv_path, index=False, encoding='utf-8-sig')
-            print(f"✅ 최종 정규화 CSV 저장 완료: {output_csv_path}")
+            print(f"최종 정규화 CSV 저장 완료: {output_csv_path}")
         
         if __name__ == "__main__":
             html_dir = "per90_stats"
@@ -476,39 +476,39 @@ Team #2 : DE박건희, DE임채현, DE오민우
     - 리영직 선수의 스타일은 중앙에서 많은 활동량으로 수비에 치중하며, 리그 내의 동포지션 선수들보다 많은 터치와 패스로 공격 전개를 이끌어주는 공격의 시발점 역할을 해주는 선수다.
     - 볼 경합 상황에서의 모습은 아쉽지만, 공을 뺏겨도 바로 탈환하는 능력(리커버리)는 좋은 선수다.
     - 이런 선수를 대체하기 위해서 우리는 축구 선수 데이터 분석 프로토타입을 이용하여 선수를 찾아보려 한다.
-        
-        ![스크린샷 2025-07-31 오후 5.06.09.png](Mini%20project%20README%2024172994258d80e2a9bef3dade303240/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2025-07-31_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_5.06.09.png)
+        <img width="1285" height="683" alt="스크린샷_2025-07-31_오후_5 06 09" src="https://github.com/user-attachments/assets/d20dcf6f-d2b1-4f7d-8899-8d92a6e9751d" />
+
         
     - 프로토타입이기 때문에 먼저 수집한 선수들의 csv를 페이지에 업로드 해준다.
     - 추후에는 내부에서 csv를 자동으로 읽어오는 기능을 추가할 예정이다.
-        
-        ![스크린샷 2025-07-31 오후 5.06.42.png](Mini%20project%20README%2024172994258d80e2a9bef3dade303240/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2025-07-31_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_5.06.42.png)
+        <img width="1301" height="709" alt="스크린샷_2025-07-31_오후_5 06 42" src="https://github.com/user-attachments/assets/54898b16-f1d7-4a41-bca5-b63dffaf7173" />
+
         
     - csv 업로드 후에 [필터 조건 설정] 버튼을 클릭하여 원하는 선수의 조건을 선택해준다.
-        
-        ![스크린샷 2025-07-31 오후 5.30.13.png](Mini%20project%20README%2024172994258d80e2a9bef3dade303240/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2025-07-31_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_5.30.13.png)
-        
-        ![스크린샷 2025-07-31 오후 5.28.15.png](Mini%20project%20README%2024172994258d80e2a9bef3dade303240/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2025-07-31_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_5.28.15.png)
+        <img width="1285" height="811" alt="스크린샷_2025-07-31_오후_5 30 13" src="https://github.com/user-attachments/assets/5aaea04a-0080-466e-887d-480f13e3445e" />
+
+        <img width="1295" height="540" alt="스크린샷_2025-07-31_오후_5 28 15" src="https://github.com/user-attachments/assets/d3c1c7a0-509b-4b22-bb36-6dd38aadc1f6" />
+
         
     - 원하는 선수의 조건을 입력해준다.
     - 이때 점수의 범위를 정해줄 수 있다.
+        <img width="1264" height="463" alt="스크린샷_2025-07-31_오후_5 28 28" src="https://github.com/user-attachments/assets/d725f500-bb0a-4a5c-9333-010e1235d77f" />
         
-        ![스크린샷 2025-07-31 오후 5.28.28.png](Mini%20project%20README%2024172994258d80e2a9bef3dade303240/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2025-07-31_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_5.28.28.png)
         
     - 필터링 조건 선택을 하면 조건에 맞는 선수들이 리스트업이 된다.
     - 이때 정렬 기준을 여러개로 오름차순/내림차순으로 정렬할 수 있다.
-        
-        ![스크린샷 2025-07-31 오후 5.08.38.png](Mini%20project%20README%2024172994258d80e2a9bef3dade303240/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2025-07-31_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_5.08.38.png)
+        <img width="962" height="956" alt="스크린샷_2025-07-31_오후_5 08 38" src="https://github.com/user-attachments/assets/4ddb5bf6-438d-4ce0-80fd-aefdaae9453f" />
+
         
     - 이때 조건에 맞는 것 같은 선수를 발견한 뒤 클릭하게 되면 선수의 전체적인 스탯을 볼 수 있다.
     - 리영직 선수와 비교를 위해 [비교하기] 버튼을 클릭해본다.
-        
-        ![스크린샷 2025-07-31 오후 5.09.30.png](Mini%20project%20README%2024172994258d80e2a9bef3dade303240/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2025-07-31_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_5.09.30.png)
+        <img width="1028" height="893" alt="스크린샷_2025-07-31_오후_5 09 30" src="https://github.com/user-attachments/assets/ea36f62a-fb76-46c1-9e9a-b45ad3109085" />
+
         
     - 비교할 선수를 정해준 뒤 [비교 시작]을 누르게 되면, 상단에 상세 스탯 비교가 나오게 된다.
     - 이때 바 그래프를 통해 누가 어떤 스탯이 더 높은지 직관적으로 확인할 수 있다.
-        
-        ![스크린샷 2025-07-31 오후 5.12.16.png](Mini%20project%20README%2024172994258d80e2a9bef3dade303240/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2025-07-31_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_5.12.16.png)
+        <img width="882" height="876" alt="스크린샷_2025-07-31_오후_5 12 16" src="https://github.com/user-attachments/assets/e9fc1e9e-0230-4a8c-8676-413a4122b758" />
+
         
     - 스크롤을 내려보면 종합 능력치 비교가 나오게 되는데, 상세 스탯을 조합하여 만든 8개의 스탯을 레이저 형태로 직관적으로 볼 수 있게 해준다.
     - 이를 통해 조금 더 조사하여 스카우트를 보낼 만 한지, 그럴 정도는 아닌지 의사 결정에 보조할 수 있으며, 이 선수를 소개할 때 보조 도구로 사용할 수 있을 것으로 기대한다.
