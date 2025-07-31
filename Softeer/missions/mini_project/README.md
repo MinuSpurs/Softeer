@@ -1,4 +1,4 @@
-<img width="882" height="876" alt="스크린샷_2025-07-31_오후_5 12 16" src="https://github.com/user-attachments/assets/403f2a4b-9ed1-41e8-a14b-839e434b69e8" /><img width="1285" height="811" alt="스크린샷_2025-07-31_오후_5 30 13" src="https://github.com/user-attachments/assets/559c4e2b-d862-4510-a6c6-79c021448d30" /># Mini project
+# Mini project
 
 ---
 
