@@ -5,8 +5,7 @@
 택시의 수요가 일정하지 않고, 특정 시간대에 특정 장소에서 수요가 갑자기 증가하는 경우가 있다. 이 경우에도 수요를 최대한 해소할 수 있도록 자율주행 택시를 배차하는 전략을 짜는 product를 제공한다.
 
 Pick Up Location, 요일, 시간대 세 가지 기준으로 그룹을 만들어서 각각의 호출 횟수를 count한 후 정렬해보았다. Location이 ID로만 떠서 lookup table csv 파일을 JOIN하여 다시 나타냈다.
-
-![image.png](Team%20wiki%20-%20Team%202%2024072994258d806e9b31e8677847e734/image.png)
+<img width="1354" height="411" alt="image" src="https://github.com/user-attachments/assets/3412d0fa-b41e-42f8-8bb8-4e2a12bd5d5d" />
 
 Top 10을 뽑아본 결과, 맨해튼이 압도적으로 많았다. 이는 맨해튼 내에 술집(bar, pub, lounge)들이 많기 때문이다. [Top 10 bars & lounges](https://www.yelp.com/search?find_desc=Bars+and+Lounges&find_loc=Manhattan%2C+NY&sortby=review_count) 호출한 시간대도 금요일에서 토요일로 넘어가는 밤 11시 ~ 새벽 1시와 토요일에서 일요일로 넘어가는 밤 11시 ~ 새벽 1시가 많았다. 주말에 회식, 술 약속 등을 즐긴 뒤에 안전한 귀가를 위해 택시를 탑승하는 사람에 대한 케이스가 많다고 추측했다.
 
