@@ -1,0 +1,47 @@
+services:
+  spark-master:
+    build: .
+    container_name: spark-master
+    hostname: spark-master
+    networks:
+      - spark-net
+    ports:
+      - "8080:8080"  
+      - "7077:7077"  
+    command: bash -c "/opt/spark/sbin/start-master.sh && tail -f /dev/null"
+    volumes:
+      - ./data:/data
+      - ./scripts:/scripts
+      - ./output:/data/output
+
+  spark-worker-1:
+    build: .
+    container_name: spark-worker-1
+    hostname: spark-worker-1
+    depends_on:
+      - spark-master
+    networks:
+      - spark-net
+    command: bash -c "/opt/spark/sbin/start-worker.sh spark://spark-master:7077 && tail -f /dev/null"
+    volumes:
+      - ./data:/data
+      - ./scripts:/scripts
+      - ./output:/data/output
+
+  spark-worker-2:
+    build: .
+    container_name: spark-worker-2
+    hostname: spark-worker-2
+    depends_on:
+      - spark-master
+    networks:
+      - spark-net
+    command: bash -c "/opt/spark/sbin/start-worker.sh spark://spark-master:7077 && tail -f /dev/null"
+    volumes:
+      - ./data:/data
+      - ./scripts:/scripts
+      - ./output:/data/output
+
+networks:
+  spark-net:
+    driver: bridge
